@@ -55,6 +55,13 @@ export default class Functions {
         object.technician_level = triangle_outputs[2]
         break;
 
+      case 'email':
+          object.email = value;
+          break;
+      case 'phone':
+        object.phone = value;
+        break;
+
       default:
         break;
 

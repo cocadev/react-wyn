@@ -10,11 +10,11 @@ export const CustomerTypeInput = (props) => {
     const id = props.calculator.industry
     return (
         <div className='container'>
-            <div className='col-lg-5 col-md-12 f-26 m-t responsive-center'>
+            <div className='col-md-5 col-sm-5 col-xs-12 f-26 m-t responsive-center'>
                 Customer Type:
             </div>
 
-            <div className='col-lg-7 col-md-12 f-26 m-t responsive-center' style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <div className='col-md-7 col-sm-7 col-xs-12 f-26 m-t responsive-center' style={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <Dropdown
                     overlay={
                         <Menu style={{ marginTop: -2 }}>

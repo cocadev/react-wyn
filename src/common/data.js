@@ -2,7 +2,7 @@ import { images } from "./images";
 
 export const data = {
     SECTION1_HEADER: 'The Facilities Maintenance Revolution',
-    SECTION1_DESCRIPTION: 'What’s the financial benefit of switching from self-managed property repairs to an integrated services provider? Select your industry to explore the average order size, reactive repair budget, and savings based on our industry research:',
+    SECTION1_DESCRIPTION: 'What’s the financial benefit of modernising your facilities maintenance model by switching to Intact Group’s award-winning integrated building management service? Select your industry to explore the average order size, reactive repair budget, and savings based on our industry research:',
 
     SECTION2_HEADER1: 'Integrated Building Management',
     SECTION2_HEADER2: 'Savings Calculator',
@@ -12,9 +12,15 @@ export const data = {
     SECTION2_RESULTS: 'Projected Annual Savings',
 
     SECTION3_HEADER: 'Prioritizing Your Maintenance Goals',
-    SECTION3_DESCRIPTION: 'How would you like to achieve your goals?',
-    SECTION3_TITLE: 'Move the slider between cost, time and quality to update your results.',
+    SECTION3_DESCRIPTION: 'How would you like to achieve your goals? Drag the selector below between cost, time and quality to choose the best fit for your business.',
 
+    S4_EMAIL_OK: 'Your Report Is On It\'s Way',
+    S4_EMAIL_OK_BODY: 'The Intact team will be in touch with your report shortly! In the meantime, why not visit <a href="http://intactgroupau.com/">Intactgroupau.com</a> for more information.',
+    S4_EMAIL_INVALID: 'Valid Email Required',
+    S4_EMAIL_INVALID_BODY: 'Please update your email address and try again.',
+    S4_EMAIL_ERROR: 'Dev Build: Under Construction',
+    S4_EMAIL_ERROR_BODY: 'Our report feature is almost done! We\'ll reach once this is ready for production. In the meantime, why not visit <a href="http://intactgroupau.com/">Intactgroupau.com</a> for more information.',
+    
     SECTION4_HEADER: 'Download Report',
     SECTION4_HEADER2: 'Based On Live Customer Results',
     SECTION4_CUSTOMER_LIST: [
@@ -32,10 +38,23 @@ export const data = {
             img: images.retail,
             img_selected: images.retailselected,
             sub_sector: 'Midrange Specialty Retailer',
+
             maintenance_budget: 420000,
             order_cost: 380,
             savings: 92000,
-            percentage: 27
+            percentage: 27,
+
+            before_budget: 420000,
+            before_order_cost: 380,
+            before_hours: 465,
+            after_budget: 420000,
+            after_order_cost: '380',
+            after_hours: '60 hours',
+            savings_diff: 420000,
+            //savings_percentage: '380'
+            //savings_hours: '60 hours',
+
+            
         },
         {
             id: 1,
@@ -59,19 +78,19 @@ export const data = {
             savings: 90000,
             percentage: 46
         },
+        // {
+        //     id: 3,
+        //     title: 'Education',
+        //     img: images.education,
+        //     img_selected: images.educationselected,
+        //     sub_sector: 'Tertiary Institution',
+        //     maintenance_budget: 0,
+        //     order_cost: 0,
+        //     savings: 0,
+        //     percentage: 0
+        // },
         {
             id: 3,
-            title: 'Education',
-            img: images.education,
-            img_selected: images.educationselected,
-            sub_sector: 'Tertiary Institution',
-            maintenance_budget: 0,
-            order_cost: 0,
-            savings: 0,
-            percentage: 0
-        },
-        {
-            id: 4,
             title: 'Government',
             img: images.government,
             img_selected: images.governmentselected,
@@ -169,8 +188,8 @@ export const data = {
         default:            [350, '24 hours', 'Mid-Level'], 
         cost_lowest:        [140, '10 days', 'Apprentice'],
         cost_lower:         [350, '24 hours', 'Mid-Level'], 
-        time_faster:        [350, '4 hours', 'First Available'],
-        time_fastest:       [380, '2 hours', 'Senior'],
+        time_faster:        [380, '2 hours', 'Senior'],
+        time_fastest:        [350, '4 hours', 'First Available'],
         seniority_higher:   [470, '4 hours', 'Midlevel+'],
         seniority_highest:  [600, '4 hours', 'Senior']
     },

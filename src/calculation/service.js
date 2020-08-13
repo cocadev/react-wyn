@@ -175,17 +175,28 @@ export default class Services {
         const cost_zone = Services.ReturnZone(percent_cost)
         const seniority_zone = Services.ReturnZone(percent_seniority)
         const response_zone = Services.ReturnZone(percent_response_time)
-
+        console.table('TriangleTradeoffs: Cost:', cost_zone, ' seniority_zone: ', seniority_zone, ' response: ', response_zone)
         // Divide triangle into 5 zones, set response time from lowest to highest. Eg percent_cost under 20% -> costs_lists[0]
+        
+        //if ((cost_zone === 'default') && (seniority_zone === 'default') && (response_zone === 'default')) {
+            
 
-        if ((cost_zone === 'default') && (seniority_zone === 'default') && (response_zone === 'default')) {
-            return data.TRADEOFFS_RETAIL.default
-        } else if (cost_zone === 'lower') { 
+        if (cost_zone === 'lower') { // Cost
             return data.TRADEOFFS_RETAIL.cost_lower
         } else if (cost_zone === 'lowest') { 
             return data.TRADEOFFS_RETAIL.cost_lowest
+
+        } else if (seniority_zone === 'lower') { // Seniority
+            return data.TRADEOFFS_RETAIL.seniority_higher
+        } else if (seniority_zone === 'lowest') { 
+            return data.TRADEOFFS_RETAIL.seniority_highest
+
+        } else if (response_zone === 'lower') { // Delivery
+            return data.TRADEOFFS_RETAIL.time_faster
+        } else if (response_zone === 'lowest') { 
+            return data.TRADEOFFS_RETAIL.time_fastest
         }
-        return [123, 'Dummy Hours', 'Dummy Seniority']
+        return data.TRADEOFFS_RETAIL.default
     }
 
 
@@ -272,6 +283,17 @@ export default class Services {
         if (orders > 1000) { return "2.5" }
         else if (orders > 100) { return "2"  }
         else { return "1.5"}
+    }
+
+    //Dynamically round to nearest $100 or $1000
+    static RoundValue(input) {
+        const trimmed = input.toFixed(0)
+        switch(trimmed.toString().length) {
+            case 4:  
+            case 5:
+                return Math.round((trimmed).toFixed(0)/1000)*1000 // broken don't use yet
+            default: return trimmed
+        }
     }
 
 }

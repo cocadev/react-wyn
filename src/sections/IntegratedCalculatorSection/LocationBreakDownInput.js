@@ -6,10 +6,10 @@ export const LocationBreakDownInput = (props) => {
     const { calculator, setCalculator } = props
     return (
         <div className='container' style={{ marginTop: 20 }}>
-            <div className='col-lg-5 col-xs-12 f-26 m-t-15 responsive-center'>
+            <div className='col-md-5 col-sm-5 col-xs-12 f-26 m-t-15 responsive-center'>
                 Location BreakDown:
             </div>
-            <div className='col-lg-7 col-xs-12 f-36' style={{ display: 'flex', justifyContent: 'space-around' }}>
+            <div className='col-md-7 col-sm-7 col-xs-12 f-36' style={{ display: 'flex', justifyContent: 'space-around' }}>
                 <FormGroup role="form" className='location-break'>
                     <div className='f-18'>CBD</div>
                     <FormControl

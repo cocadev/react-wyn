@@ -18,10 +18,10 @@ export const InputSlider = ({ label, description, value, options = {} }) => {
     }
     return (
         <div className="container" style={{ marginTop: 30 }}>
-            <div className="col-lg-5 col-xs-12 responsive-center">
+            <div className="col-md-5 col-sm-5 col-xs-12 responsive-center">
                 <SelectionOutput {...{ label, description, value }} />
             </div>
-            <div className="col-lg-7 col-xs-12 p-h-md">
+            <div className="col-md-7 col-sm-7 col-xs-12 p-h-md">
                 <Nouislider{...options} />
             </div>
         </div>

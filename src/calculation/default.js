@@ -42,5 +42,7 @@ export const CALCULATOR = {
   // //Output
   cost_per_work_order: 296,
   average_response_time: '8 hours',
-  technician_level: 'Mid-Level'
+  technician_level: 'Mid-Level',
+  email: '',
+  phone: ''
 }
