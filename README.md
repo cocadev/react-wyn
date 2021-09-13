@@ -1,4 +1,4 @@
-# Wyn Calculator System
+# Wyn Calculator System 2
 
 ## Build Instructions
 1. npm build
